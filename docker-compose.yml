@@ -1,0 +1,11 @@
+version: "3"
+services:
+  backend:
+    build: .
+    image: figassis/ingress-backend:0.0.1
+    restart: always
+    container_name: backend
+    ports:
+      - 8080:8080
+    volumes:
+      - ./rootfs/www:/www:ro
